@@ -1,0 +1,691 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,initial-scale=1,user-scalable=no" />
+<title>{php if(isset($title)) $_W['page']['title'] = $title}{if !empty($_W['page']['title'])}{$_W['page']['title']}{/if}{if empty($_W['page']['copyright']['sitename'])}{if IMS_FAMILY != 'x'}{if !empty($_W['page']['title'])} - {/if}公众平台自助引擎{/if}{else}{if !empty($_W['page']['title'])} - {/if}{$_W['page']['copyright']['sitename']}{/if}</title>
+<meta name="description" content="{if empty($_W['page']['copyright']['description'])}{if IMS_FAMILY != 'x'}微信框架微信公众平台，让世界为您的产品点赞，业内功能最强的微信平台，秒杀市场其他微信公众号第三方开发平台{/if}{else}{$_W['page']['copyright']['description']}{/if}" />
+<meta name="keywords" content="{if empty($_W['page']['copyright']['keywords'])}{if IMS_FAMILY != 'x'}微信框架,微信,微信公众平台{/if}{else}{$_W['page']['copyright']['keywords']}{/if}" />
+<link rel="stylesheet" type="text/css" href="themes/default/style/css/bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="themes/default/style/css/animate.min.css" />
+<link rel="stylesheet" type="text/css" href="themes/default/style/css/style.css" />
+<link rel="stylesheet" type="text/css" href="themes/default/style/css/pace-theme-minimal.css">
+<link rel="stylesheet" type="text/css" href="themes/default/style/css/store.css" />
+<link rel="stylesheet" type="text/css" href="themes/default/style/css/font-awesome.min.css" />
+<script src="themes/default/style/js/jquery-1.11.1.min.js"></script>
+<script src="themes/default/style/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="themes/default/style/js/util.js"></script>
+<script src="themes/default/style/js/require.js"></script>
+<script src="themes/default/style/js/config.js"></script>
+</head>
+<body>
+<div class="head head-big">
+<nav class="navbar navbar-default">
+<div class="container">
+<div class="navbar-header">
+<a class="navbar-brand" href="">
+<img src="{if !empty($_W['setting']['copyright']['flogo'])}{php echo tomedia($_W['setting']['copyright']['flogo']);}{else}./resource/images/logo/logo.png{/if}" style="width:110px;" class="img-responsive" />
+</a>
+</div>
+<div class="collapse navbar-collapse">
+<ul class="nav navbar-nav head-nav">
+<!-- <li class="active"><a href="">首页</a></li> -->
+</ul><ul class="nav navbar-nav navbar-right head-user-login"><li>
+<a href="{url 'user/login'}">登录</a></li>
+<li><a href="{url 'user/register'}">免费注册</a></li>
+</ul>
+</div>
+</div>
+</nav>
+</div>
+<link href="themes/default/style/css/index.css" rel="stylesheet">
+<link href="themes/default/style/css/star-rating.css" rel="stylesheet">
+<script src="themes/default/style/js/owl.carousel.min.js"></script>
+<script src="themes/default/style/js/mislider.min.js" type="text/javascript" charset="utf-8"></script>
+<div class="banner" id="banner">
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+<ol class="carousel-indicators">
+<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+</ol>
+<div class="carousel-inner" role="listbox">
+<div class="item active banner1">
+<div style="width: 1200px; height: 500px; margin: 0 auto; position: relative;">
+<img src="themes/default/style/images/bannerbg1.png" id="banner1-1" class="animated zoomIn" />
+<img src="themes/default/style/images/bannerbg2.png" id="banner1-2" class="animated zoomIn" />
+<img src="themes/default/style/images/bannerbg3.png" id="banner1-3" class="animated zoomIn" />
+<img src="themes/default/style/images/bannerbg4.png" id="banner1-4" class="animated zoomIn" />
+<img src="themes/default/style/images/bannerbg5.png" id="banner1-5" class="animated zoomIn" />
+<img src="themes/default/style/images/bannerbg6.png" id="banner1-6" class="animated zoomIn" />
+<img src="themes/default/style/images/bannerbg7.png" id="banner1-7" class="animated zoomIn" />
+<img src="themes/default/style/images/banner1-dn.png" id="banner1-dn" class="animated bounceInLeft" />
+<img src="themes/default/style/images/banner1-sj.png" id="banner1-sj" class="animated bounceInUp" />
+<img src="themes/default/style/images/bannerbg8.png" id="banner1-8" class="animated fadeInUp" />
+<svg id="svg_1">
+<g>
+<path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M362.333,291.5c0,0-25.918-0.609-30.833-16.667
+									c-5-16.333-3.5-69.333-3.5-69.333" />
+<path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M362.738,337.453c0,0-17.607,1.738-37.377-1.103
+									c-2.925-0.42-5.767-0.941-8.435-1.582c-10.272-2.468-16.392-9.657-18.022-14.982c-5-16.333-3.5-47.333-3.5-47.333" />
+<path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M681.178,267.913
+									c13.988-0.621,26.793,2.497,31.708-1.958c9.375-8.5,6.25-42.12,6.25-42.12" />
+<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="681.178" y1="309.166" x2="681.178" y2="185.25" />
+<path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M731.486,363.659
+									c13.988-0.621,35.793,2.497,40.708-1.958c9.375-8.5,6.25-152.12,6.25-152.12" />
+<path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M363.375,386.125h-102.25c0,0-18.125,1.3-23-7.5
+									c-3.312-5.979-5.125-22.75-5.125-22.75l-1-17.896" />
+<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="439" y1="218" x2="439" y2="193" />
+<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="579" y1="218" x2="579" y2="167" />
+<path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M733,428l49.248-0.87c0,0,13.071,0.59,16.127-3.63
+									C801,419.875,801,412.75,801,412.75V354.5" />
+<path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M731.486,379.5h81.389c0,0,11.677,0.091,18.5-3.5
+									c7.125-3.75,7.875-16.625,7.875-16.625V279.75" />
+<path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M731.486,401.5c0,0,8.519-0.754,11.848-3.667
+									c4.667-4.083,4.25-11.25,4.25-11.25L748,285.144" />
+</g>
+</svg>
+<svg id="svg_ie" style="display: none;" class="animated fadeIn">
+<g>
+<path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M362.333,291.5c0,0-25.918-0.609-30.833-16.667
+									c-5-16.333-3.5-69.333-3.5-69.333" />
+<path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M362.738,337.453c0,0-17.607,1.738-37.377-1.103
+									c-2.925-0.42-5.767-0.941-8.435-1.582c-10.272-2.468-16.392-9.657-18.022-14.982c-5-16.333-3.5-47.333-3.5-47.333" />
+<path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M681.178,267.913
+									c13.988-0.621,26.793,2.497,31.708-1.958c9.375-8.5,6.25-42.12,6.25-42.12" />
+<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="681.178" y1="309.166" x2="681.178" y2="185.25" />
+<path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M731.486,363.659
+									c13.988-0.621,35.793,2.497,40.708-1.958c9.375-8.5,6.25-152.12,6.25-152.12" />
+<path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M363.375,386.125h-102.25c0,0-18.125,1.3-23-7.5
+									c-3.312-5.979-5.125-22.75-5.125-22.75l-1-17.896" />
+<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="439" y1="218" x2="439" y2="193" />
+<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="579" y1="218" x2="579" y2="167" />
+<path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M733,428l49.248-0.87c0,0,13.071,0.59,16.127-3.63
+									C801,419.875,801,412.75,801,412.75V354.5" />
+<path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M731.486,379.5h81.389c0,0,11.677,0.091,18.5-3.5
+									c7.125-3.75,7.875-16.625,7.875-16.625V279.75" />
+<path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M731.486,401.5c0,0,8.519-0.754,11.848-3.667
+									c4.667-4.083,4.25-11.25,4.25-11.25L748,285.144" />
+</g>
+</svg>
+<img src="themes/default/style/images/b-s-n.png" id="banner1-9" class="animated bounceIn" />
+<img src="themes/default/style/images/b-s-5.png" id="banner1-10" class="animated bounceIn" />
+<img src="themes/default/style/images/b-s-4.png" id="banner1-11" class="animated bounceIn" />
+<img src="themes/default/style/images/b-s-1.png" id="banner1-12" class="animated bounceIn" />
+<img src="themes/default/style/images/b-s-q.png" id="banner1-13" class="animated bounceIn" />
+<img src="themes/default/style/images/b-s-6.png" id="banner1-14" class="animated bounceIn" />
+<img src="themes/default/style/images/b-s-time.png" id="banner1-15" class="animated bounceIn" />
+<img src="themes/default/style/images/b-s-3.png" id="banner1-16" class="animated bounceIn" />
+<img src="themes/default/style/images/b-s-8.png" id="banner1-17" class="animated bounceIn" />
+<img src="themes/default/style/images/b-s-2.png" id="banner1-18" class="animated bounceIn" />
+<img src="themes/default/style/images/b-s-7.png" id="banner1-19" class="animated bounceIn" />
+<p id="banner-versions" class="animated bounceInDown">微信公众号 / 小程序统一管理</p>
+<p id="banner-speciality" class="animated bounceInRight">自由，独立，可定制化</p>
+<p id="banner-frame" class="animated bounceInUp">无需技术，一键生成，多行业小程序供您选择，实体企业，数据安全自由，平台独立。</p>
+<a class="free-down" href="{url 'user/register'}" target="_blank"><img src="themes/default/style/images/free-down.png" /></a>
+</div>
+</div>
+<div class="item">
+<div style="width: 100%; height: 500px; background: url('themes/default/style/images/14809915335846232e05943_c0544C1Dg1zh.jpg') no-repeat center;">
+</div>
+</div>
+</div>
+<a class="left banner-left" href="#carousel-example-generic" data-slide="prev">
+<img src="themes/default/style/images/left-arrow.png" />
+</a>
+<a class="right banner-right" href="#carousel-example-generic" data-slide="next">
+<img src="themes/default/style/images/right-arrow.png" />
+</a>
+</div>
+</div>
+<div class="action">
+<div class="container">
+<div class="head-title">
+<h2>强大的公众号 / 小程序管理引擎</h2>
+<p>数据安全自由，丰富的行业应用领域</p>
+</div>
+<div class="col-xs-6 action-left tab-content">
+<div class="action-phone"></div>
+<div class="tab-pane active" role="tabpanel" id="zdhf">
+<img src="themes/default/style/images/action-zdhf.png" />
+</div>
+<div class="tab-pane" role="tabpanel" id="dggh">
+<img src="themes/default/style/images/action-dggh.jpg" />
+</div>
+<div class="tab-pane" role="tabpanel" id="dyh">
+<img src="themes/default/style/images/action-dyh.jpg" />
+</div>
+<div class="tab-pane" role="tabpanel" id="dsqf">
+<img src="themes/default/style/images/action-dsqf.jpg" />
+</div>
+<div class="tab-pane" role="tabpanel" id="fsgl">
+<img src="themes/default/style/images/action-fsgl.jpg" />
+</div>
+<div class="tab-pane" role="tabpanel" id="yycj">
+<img src="themes/default/style/images/action-yycj.jpg" />
+</div>
+</div>
+<div class="col-xs-6 action-right" role="tablist">
+<ul role="tablist">
+<li class="col-xs-4 action-list active" role="presentation">
+<div class="action-img">
+<a href="#zdhf" role="tab" data-toggle="tab">
+<img src="themes/default/style/images/zdhf.png" class="" />
+</a>
+</div>
+<span>自动回复</span>
+</li>
+<li class="col-xs-4 action-list" role="presentation">
+<div class="action-img">
+<a href="#dggh" role="tab" data-toggle="tab">
+<img src="themes/default/style/images/dggh.png" class="" />
+</a>
+</div>
+<span>多公众号管理</span>
+</li>
+<li class="col-xs-4 action-list" role="presentation">
+<div class="action-img">
+<a href="#dyh" role="tab" data-toggle="tab">
+<img src="themes/default/style/images/dyh.png" class="" />
+</a>
+</div>
+<span>多用户管理</span>
+</li>
+<li class="col-xs-4 action-list" role="presentation">
+<div class="action-img">
+<a href="#dsqf" role="tab" data-toggle="tab">
+<img src="themes/default/style/images/dsqf.png" class="" />
+</a>
+</div>
+<span>定时群发</span>
+</li>
+<li class="col-xs-4 action-list" role="presentation">
+<div class="action-img">
+<a href="#fsgl" role="tab" data-toggle="tab">
+<img src="themes/default/style/images/fsgl.png" class="" />
+</a>
+</div>
+<span>粉丝会员管理</span>
+</li>
+<li class="col-xs-4 action-list" role="presentation">
+<div class="action-img">
+<a href="#yycj" role="tab" data-toggle="tab">
+<img src="themes/default/style/images/yycj.png" class="" />
+</a>
+</div>
+<span>应用插件</span>
+</li>
+</ul>
+<div class="col-xs-12 action-more">
+<a class="btn btn-default btn-lg" href="tencent://message/?uin={$copyright['qq']}&Site=&menu=yes" role="button">免费咨询更多</a>
+</div>
+</div>
+</div>
+</div>
+<div class="special">
+<div class="container">
+<div class="head-title">
+<h2>丰富的行业应用，提供各类行业解决方案</h2>
+<p> 可提供各种大型集群架构解决方案</p>
+</div>
+<div id="special" class="owl-carousel">
+<div class="special-list">
+<div class="special-img">
+<img src="themes/default/style/images/1-1.png" />
+</div>
+<div class="special-content">
+<div class="special-iocn">
+<img src="themes/default/style/images/1-2.png" />
+</div>
+<h3 class="special-title">微信点餐</h3>
+<div class="special-de">
+<img src="themes/default/style/images/1-3.png" />
+<div class="special-version">
+
+</div>
+</div>
+<p class="special-function">餐饮分销一站式管理，改变餐饮行业传统单一的线下模式</p>
+<div class="special-more">
+<a href="tencent://message/?uin={$copyright['qq']}&Site=&menu=yes" class="btn btn-buy">免费咨询</a>
+</div>
+</div>
+</div>
+<div class="special-list">
+<div class="special-img">
+<img src="themes/default/style/images/2-1.png" />
+</div>
+<div class="special-content">
+<div class="special-iocn">
+<img src="themes/default/style/images/2-2.png" />
+</div>
+<h3 class="special-title">家校通</h3>
+<div class="special-de">
+<img src="themes/default/style/images/2-3.png" />
+<div class="special-version">
+
+</div>
+</div>
+<p class="special-function">支持学生端 教师端，支持智能硬件等功能，更加贴近学校的实际教学</p>
+<div class="special-more">
+<a href="tencent://message/?uin={$copyright['qq']}&Site=&menu=yes" class="btn btn-buy">免费咨询</a>
+</div>
+</div>
+</div>
+<div class="special-list">
+<div class="special-img">
+<img src="themes/default/style/images/5-1.png" />
+</div>
+<div class="special-content">
+<div class="special-iocn">
+<img src="themes/default/style/images/5-2.png" />
+</div>
+<h3 class="special-title">微信外卖</h3>
+<div class="special-de">
+<img src="themes/default/style/images/5-3.png" />
+<div class="special-version">
+
+</div>
+</div>
+<p class="special-function"> 提供生鲜，网上超市，餐饮商品等三大主力O2O解决方案。</p>
+<div class="special-more">
+<a href="tencent://message/?uin={$copyright['qq']}&Site=&menu=yes" class="btn btn-buy">免费咨询</a>
+</div>
+</div>
+</div>
+<div class="special-list">
+<div class="special-img">
+<img src="themes/default/style/images/6-1.png" />
+</div>
+<div class="special-content">
+<div class="special-iocn">
+<img src="themes/default/style/images/6-2.png" />
+</div>
+<h3 class="special-title">微小区</h3>
+<div class="special-de">
+<img src="themes/default/style/images/6-3.png" />
+<div class="special-version">
+
+</div>
+</div>
+<p class="special-function">专为互联网时代物业企业打造的智能物业管理系统，让传统小区升级为智能小区。</p>
+<div class="special-more">
+<a href="tencent://message/?uin={$copyright['qq']}&Site=&menu=yes" class="btn btn-buy">免费咨询</a>
+</div>
+</div>
+</div>
+<div class="special-list">
+<div class="special-img">
+<img src="themes/default/style/images/7-1.png" />
+</div>
+<div class="special-content">
+<div class="special-iocn">
+<img src="themes/default/style/images/7-2.png" />
+</div>
+<h3 class="special-title">直播教室</h3>
+<div class="special-de">
+<img src="themes/default/style/images/7-3.png" />
+<div class="special-version">
+
+</div>
+</div>
+<p class="special-function"> 国内专业的微信直播系统，是一款针对知识分享和传递的直播系统。</p>
+<div class="special-more">
+<a href="tencent://message/?uin={$copyright['qq']}&Site=&menu=yes" class="btn btn-buy">免费咨询</a>
+</div>
+</div>
+</div>
+<div class="special-list">
+<div class="special-img">
+<img src="themes/default/style/images/8-1.png" />
+</div>
+<div class="special-content">
+<div class="special-iocn">
+<img src="themes/default/style/images/8-2.png" />
+</div>
+<h3 class="special-title">超级商城</h3>
+<div class="special-de">
+<img src="themes/default/style/images/8-3.png" />
+<div class="special-version">
+
+</div>
+</div>
+<p class="special-function">超级商城多商户O2O商城系统，电 商综合解决方案</p>
+<div class="special-more">
+<a href="tencent://message/?uin={$copyright['qq']}&Site=&menu=yes" class="btn btn-buy">免费咨询</a>
+</div>
+</div>
+</div>
+<div class="special-list">
+<div class="special-img">
+<img src="themes/default/style/images/6-1.png" />
+</div>
+<div class="special-content">
+<img src="themes/default/style/images/9-2.png" class="special-iocn" />
+<h3 class="special-title">淘宝客</h3>
+<div class="special-de">
+<img src="themes/default/style/images/9-3.png" />
+<div class="special-version">
+
+</div>
+</div>
+<p class="special-function"> 现有粉丝快速变现，极速搭建微信中自己的淘宝客平台</p>
+<div class="special-more">
+<a href="tencent://message/?uin={$copyright['qq']}&Site=&menu=yes" class="btn btn-buy">免费咨询</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="apply">
+<div class="container">
+<div class="head-title">
+<h2>行业模块，自由，独立，可定制化 </h2>
+</div>
+<ul class="index-apply-list" role="tablist">
+<li class="apply-now"><em class="js-app-count">7045+</em>个应用<em class="js-app-new-count">181</em>个新增</li>
+</ul>
+<div class="tab-content apply-content col-xs-12">
+<div role="tabpanel" class="tab-pane active" id="recommend">
+<ul class="apply-content-list">
+<li>
+<div class="apply-icon"> <img src="themes/default/style/images/1478434331581f1e1b68f87_q2UQCK06zKxs.jpg">
+<p class="apply-title">微商圈</p>
+<div class="star-rating rating-xs ">
+<div class="rating-container rating-gly-star" data-content="☆☆☆☆☆">
+<div class="rating-stars" data-content="★★★★★" style="width: 100%;"> </div>
+</div>
+</div>
+</div>
+<div class="apply-description" style="margin-top:50px;">
+<p class="apply-title">微商圈</p>
+<span></span>
+<a href="tencent://message/?uin={$copyright['qq']}&Site=&menu=yes" class="btn btn-buy" style="margin-top:15px;">免费咨询</a>
+</div>
+</li>
+<li>
+<div class="apply-icon"> <img src="themes/default/style/images/14776349505812eb86898ad_n977dz99QNgQ.jpg">
+<p class="apply-title">微小区</p>
+<div class="star-rating rating-xs ">
+<div class="rating-container rating-gly-star" data-content="☆☆☆☆☆">
+<div class="rating-stars" data-content="★★★★★" style="width: 100%;"> </div>
+</div>
+</div>
+</div>
+<div class="apply-description" style="margin-top:50px;">
+<p class="apply-title">微小区</p>
+<span></span>
+<a href="tencent://message/?uin={$copyright['qq']}&Site=&menu=yes" class="btn btn-buy" style="margin-top:15px;">免费咨询</a>
+</div>
+</li>
+<li>
+<div class="apply-icon"> <img src="themes/default/style/images/z26a9rouHSqR2lhAm6R64jw29Z6mos.jpg">
+<p class="apply-title">码上点餐外卖餐饮系统</p>
+<div class="star-rating rating-xs ">
+<div class="rating-container rating-gly-star" data-content="☆☆☆☆☆">
+<div class="rating-stars" data-content="★★★★★" style="width: 100%;"> </div>
+</div>
+</div>
+</div>
+<div class="apply-description" style="margin-top:50px;">
+<p class="apply-title">码上点餐外卖餐饮系统</p>
+<span></span>
+<a href="tencent://message/?uin={$copyright['qq']}&Site=&menu=yes" class="btn btn-buy" style="margin-top:15px;">免费咨询</a>
+</div>
+</li>
+<li>
+<div class="apply-icon"> <img src="themes/default/style/images/145812503956e938ef7b652_k72Y0eeM42a6.png">
+<p class="apply-title">微夜店</p>
+<div class="star-rating rating-xs ">
+<div class="rating-container rating-gly-star" data-content="☆☆☆☆☆">
+<div class="rating-stars" data-content="★★★★★" style="width: 100%;"> </div>
+</div>
+</div>
+</div>
+<div class="apply-description" style="margin-top:50px;">
+<p class="apply-title">微夜店</p>
+<span></span>
+<a href="tencent://message/?uin={$copyright['qq']}&Site=&menu=yes" class="btn btn-buy" style="margin-top:15px;">免费咨询</a>
+</div>
+</li>
+<li>
+<div class="apply-icon"> <img src="themes/default/style/images/145275647056974df65c18f_JNyJO4Jkdjk5.png">
+<p class="apply-title">超级店</p>
+<div class="star-rating rating-xs ">
+<div class="rating-container rating-gly-star" data-content="☆☆☆☆☆">
+<div class="rating-stars" data-content="★★★★★" style="width: 100%;"> </div>
+</div>
+</div>
+</div>
+<div class="apply-description" style="margin-top:50px;">
+<p class="apply-title">超级店</p>
+<span></span>
+<a href="tencent://message/?uin={$copyright['qq']}&Site=&menu=yes" class="btn btn-buy" style="margin-top:15px;">免费咨询</a>
+</div>
+</li>
+<li>
+<div class="apply-icon"> <img src="themes/default/style/images/zTLLle4KEE4S.jpg">
+<p class="apply-title">微现场</p>
+<div class="star-rating rating-xs ">
+<div class="rating-container rating-gly-star" data-content="☆☆☆☆☆">
+<div class="rating-stars" data-content="★★★★★" style="width: 100%;"> </div>
+</div>
+</div>
+</div>
+<div class="apply-description" style="margin-top:50px;">
+<p class="apply-title">微现场</p>
+<span></span>
+<a href="tencent://message/?uin={$copyright['qq']}&Site=&menu=yes" class="btn btn-buy" style="margin-top:15px;">免费咨询</a>
+</div>
+</li>
+<li>
+<div class="apply-icon"> <img src="themes/default/style/images/hh1wIwW4H444.jpg">
+<p class="apply-title">拼团</p>
+<div class="star-rating rating-xs ">
+<div class="rating-container rating-gly-star" data-content="☆☆☆☆☆">
+<div class="rating-stars" data-content="★★★★★" style="width: 100%;"> </div>
+</div>
+</div>
+</div>
+<div class="apply-description" style="margin-top:50px;">
+<p class="apply-title">拼团</p>
+<span></span>
+<a href="tencent://message/?uin={$copyright['qq']}&Site=&menu=yes" class="btn btn-buy" style="margin-top:15px;">免费咨询</a>
+</div>
+</li>
+<li>
+<div class="apply-icon"> <img src="themes/default/style/images/nV9ZVUqYL7aYAxnq.jpg">
+<p class="apply-title">防伪溯源</p>
+<div class="star-rating rating-xs ">
+<div class="rating-container rating-gly-star" data-content="☆☆☆☆☆">
+<div class="rating-stars" data-content="★★★★★" style="width: 100%;"> </div>
+</div>
+</div>
+</div>
+<div class="apply-description" style="margin-top:50px;">
+<p class="apply-title">防伪溯源</p>
+<span></span>
+<a href="tencent://message/?uin={$copyright['qq']}&Site=&menu=yes" class="btn btn-buy" style="margin-top:15px;">免费咨询</a>
+</div>
+</li>
+<li>
+<div class="apply-icon"> <img src="themes/default/style/images/QWh3cymTt3GHw203.jpg">
+<p class="apply-title">防伪抽奖码</p>
+<div class="star-rating rating-xs ">
+<div class="rating-container rating-gly-star" data-content="☆☆☆☆☆">
+<div class="rating-stars" data-content="★★★★★" style="width: 100%;"> </div>
+</div>
+</div>
+</div>
+<div class="apply-description" style="margin-top:50px;">
+<p class="apply-title">防伪抽奖码</p>
+<span></span>
+<a href="tencent://message/?uin={$copyright['qq']}&Site=&menu=yes" class="btn btn-buy" style="margin-top:15px;">免费咨询</a>
+</div>
+</li>
+<li>
+<div class="apply-icon"> <img src="themes/default/style/images/148932864558c55a0554bbc_yar0APuS91HK.png">
+<p class="apply-title">家校通</p>
+<div class="star-rating rating-xs ">
+<div class="rating-container rating-gly-star" data-content="☆☆☆☆☆">
+<div class="rating-stars" data-content="★★★★★" style="width: 100%;"> </div>
+</div>
+</div>
+</div>
+<div class="apply-description" style="margin-top:50px;">
+<p class="apply-title">家校通</p>
+<span></span>
+<a href="tencent://message/?uin={$copyright['qq']}&Site=&menu=yes" class="btn btn-buy" style="margin-top:15px;">免费咨询</a>
+</div>
+</li>
+</ul>
+</div>
+<div role="tabpanel" class="tab-pane" id="down">
+下载排行
+</div>
+<div role="tabpanel" class="tab-pane" id="special">
+最新发布
+</div>
+<div role="tabpanel" class="tab-pane" id="hot">
+热门付费
+</div>
+</div>
+<div class="col-xs-12 action-more apply-more">
+<a class="btn btn-default btn-lg" href="tencent://message/?uin={$copyright['qq']}&Site=&menu=yes">免费咨询,开发</a>
+</div>
+</div>
+</div>
+<!--新闻 / 公告-->
+{if !empty($news) || !empty($notices)}
+<div class="school">
+<div class="container">
+<div class="head-title">
+<h2>新闻 / 公告</h2>
+</div>
+<ul class="school-list">
+{loop $news $new}
+<li>
+<a href="{php echo url('article/news-show/detail', array('id' => $new['id']));}" target="_blank"><p class="school-title">{$new['title']}<span class="school-auth" style="background:#3f84bc;width:45px;border-radius:10%;text-align:center;color:#fff;">新闻</span></p></a>
+</li>
+{/loop}
+{loop $notices $notice}
+<li>
+<a href="{php echo url('article/notice-show/detail', array('id' => $notice['id']));}" target="_blank"><p class="school-title">{$notice['title']}<span class="school-auth" style="background:#4cbc3f;width:45px;border-radius:10%;text-align:center;color:#fff;">公告</span></p></a>
+</li>
+{/loop}
+</ul>
+</div>
+</div>
+{/if}
+<!--end新闻 / 公告-->
+
+<script type="text/javascript">
+	/**/
+	$('.action-right a').hover(function(e) {
+		e.preventDefault()
+		$(this).tab('show')
+	})
+	$(function() {
+		$('#special').owlCarousel({
+			items: 5,
+			itemsDesktop: false,
+			itemsDesktopSmall: false,
+			itemsTablet: false,
+			itemsTabletSmall: false,
+			itemsMobile: false,
+			pagination: false,
+			autoHeight: true,
+			navigation: true,
+			navigationText: ["<img src='themes/default/style/images/left-arrow.png' />", "<img src='themes/default/style/images/right-arrow.png' />"]
+		});
+	});
+
+	jQuery(function($) {
+		var slider = $('.mis-stage').miSlider({
+			speed: 150,
+			pause: false,
+			stageHeight: 250,
+			slidesOnStage: 5,
+			slidePosition: 'center',
+			slideStart: 'beg',
+			slideScaling: 120,
+			offsetV: 130,
+			centerV: true,
+			navButtonsOpacity: 0,
+			selectorSlider: 'ul',
+			afterTrans: function() {
+				var now = $(".mis-slider").find("li.mis-current a").attr("href");
+				$(".user-content").removeClass('active in');
+				$(now).addClass('active in');
+			}
+
+		});
+	});
+
+	function isIE() { //ie?
+		if(!!window.ActiveXObject || "ActiveXObject" in window) {
+			$("#svg_ie").css("display", "block");
+		} else
+			return false;
+	};
+	isIE();
+</script>
+<div class="footer">
+<div class="container">
+<div class="row" style="padding: 30px 0;font-size: 16px;"><!--foot-sever-->
+<div class="col-xs-4">
+<img src="themes/default/style/images/7day.png" />
+<div style="margin-top:15px;">7天新手变技术</div>
+</div>
+<div class="col-xs-4">
+<img src="themes/default/style/images/30day.png" />
+<div style="margin-top:15px;">30天技术变程序员</div>
+</div>
+<div class="col-xs-4">
+<img src="themes/default/style/images/24hour.png" />
+<div style="margin-top:15px;">7*24在线客服咨询</div>
+</div>
+</div>
+</div>
+<hr/>
+<div class="foot">
+<p class="footer-law">{if empty($copyright['footerright'])}<a href="http://www.we7.cc">关于微擎</a>&nbsp;&nbsp;<a href="http://bbs.we7.cc">微擎论坛</a>&nbsp;&nbsp;<a href="">联系客服</a>{else}{$copyright['footerright']}{/if} &nbsp; &nbsp; {if !empty($copyright['statcode'])}{$copyright['statcode']}{/if}</p>
+<p class="footer-law">{if empty($copyright['footerleft'])}Powered by <a href="http://www.we7.cc"><b>微擎</b></a> v{IMS_VERSION} &copy; 2014-2015 <a href="http://www.we7.cc">www.we7.cc</a>{else}{$copyright['footerleft']}{/if}</p>
+</div>
+</div>
+<!--end底部-->
+<script type="text/javascript">
+	$("img").one("error", function(e){
+		$(this).attr("src", "themes/default/style/images/free-down.png");
+	});
+	
+	$(document).ready(function() {
+		dropdownOpen(); //调用
+		$('.apply-tab li').mouseover(function(e) {
+			e.preventDefault()
+			$(this).children('a').tab('show')
+		})
+		$('.go-back').click(function(){
+			window.history.go(-1);
+		});
+	});
+
+	/**
+	 * 鼠标划过就展开子菜单，免得需要点击才能展开
+	 */
+	function dropdownOpen() {
+		var $dropdownLi = $('li.dropdown');
+		$dropdownLi.mouseover(function() {
+			$(this).addClass('open');
+		}).mouseout(function() {
+			$(this).removeClass('open');
+		});
+	}
+</script>
+<script>
+	$('[data-toggle="tooltip"]').tooltip();
+</script>
+<!--end大首页-->
+</body>
+</html>

@@ -1,0 +1,1 @@
+<b>[<?php echo $store_name; ?>]平台昨日（<?php echo $yesterday; ?>）关键指标：打开次数为<?php echo $data['session_cnt']; ?>，访问次数为<?php echo $data['visit_pv']; ?>，访问人数为<?php echo $data['visit_uv']; ?>，新用户数为<?php echo $data['visit_uv_new']; ?>。请悉知!</b>
